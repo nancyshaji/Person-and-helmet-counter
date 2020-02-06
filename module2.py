@@ -25,7 +25,7 @@ colors = np.random.uniform(0, 255, size=(len(classes), 3))
 
 # Loading image
 winName = 'Yolo object detection in OpenCV'
-cv2.namedWindow(winName, cv2.WINDOW_NORMAL)
+#cv2.namedWindow(winName, cv2.WINDOW_NORMAL)
 for fn in glob('images/*.jpg'):
     img = cv2.imread(fn)
     #frame_count =0
@@ -67,6 +67,7 @@ for fn in glob('images/*.jpg'):
    # print(indexes)
     count=0
     motor=0
+    print("\n\nImage :",fn ,"\n")
     font = cv2.FONT_HERSHEY_PLAIN
     for i in range(len(boxes)):
         if i in indexes:
@@ -81,11 +82,11 @@ for fn in glob('images/*.jpg'):
             if label=="motorbike":
                 motor=1
     if motor==1:
-        print("\t Person= ")
-        print(count)
+        print("\t Person= ",count)
+        #print(count)
     else:
-        print("\t No motorbike\t Person= ")
-        print(count)   
+        print("\t No motorbike. Person= ",count)
+        #print(count)   
    # cv2.imshow("Image", img)
 
     #cv2.waitKey(400)
@@ -203,8 +204,8 @@ for fn in glob('images/*.jpg'):
             if my_class == unknown_class:
                 count_person += 1
         #if(frame_count_out > 0):
-        print("Helmet count= ")
-        print(frame_count_out)
+        print("\tHelmet count= ",frame_count_out)
+        #print(frame_count_out)
 
 
         if count_person >= 1:
@@ -222,7 +223,7 @@ for fn in glob('images/*.jpg'):
     # Process inputs
     winName = 'Deep learning object detection in OpenCV'
     cv2.namedWindow(winName, cv2.WINDOW_NORMAL)
-
+    cv2.resizeWindow("img",(20,20))
     #fn="img0239.jpg"
     frame = cv2.imread(fn)
     #for fn in glob('images/*.jpg'):
