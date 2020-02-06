@@ -21,6 +21,6 @@ This code combines 2 codes:
   
   Weaknesses are:
       1. Takes caps as helmets
-      2. Both the model are not 100 percent accurate.
+      2. Accuracy of both the models
       
  This has been developed as part of our projects(Helmet detection), module 2.
