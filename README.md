@@ -24,6 +24,6 @@ This code combines 2 codes:
       2. Accuracy of both the models
       
  This has been developed as part of our projects(Helmet detection), module 2.
- 
+ ![screenshot](https://github.com/nancyshaji/Person-and-helmet-counter/blob/master/Screenshot%20from%202020-02-06%2014-30-01.png)
 
  
